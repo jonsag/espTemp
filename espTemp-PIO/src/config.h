@@ -7,12 +7,12 @@
    Sensors
  ***********/
 const int numberOfSensors = 1;
-const String sensor1Name = "nodeMCU 1";
+const String sensor1Name = "ESP-01 1";
 
 /***********
    DHT config
  ***********/
-const int dhtPin = 0; // Connect DHT sensor to GPIO0, D3
+const int dhtPin = 1; // Connect DHT sensor to GPIO1, D3
 
 /***********
    Web server

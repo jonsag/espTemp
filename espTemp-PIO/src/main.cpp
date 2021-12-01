@@ -25,7 +25,7 @@ void setup()
   // Serial port for debugging purposes
   Serial.begin(115200);
 
-  dht.setup(dhtPin, DHTesp::DHT11);
+  dht.setup(dhtPin, DHTesp::DHT22);
 
   setup_wifi();
 
