@@ -52,7 +52,7 @@ U 1 1 61A79A2B
 P 6050 1900
 F 0 "U2" H 6050 2142 50  0000 C CNN
 F 1 "LD1117S33TR_SOT223" H 6050 2051 50  0000 C CNN
-F 2 "My_Parts:TO-220F-3_Vertical_large" H 6050 2100 50  0001 C CNN
+F 2 "My_Misc:TO-220F-3_Horizontal_TabDown_large" H 6050 2100 50  0001 C CNN
 F 3 "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000544.pdf" H 6150 1650 50  0001 C CNN
 	1    6050 1900
 	1    0    0    -1  
