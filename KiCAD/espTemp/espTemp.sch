@@ -178,12 +178,12 @@ Wire Wire Line
 $Comp
 L power:GND #PWR0105
 U 1 1 61A926AA
-P 4350 4050
-F 0 "#PWR0105" H 4350 3800 50  0001 C CNN
-F 1 "GND" H 4355 3877 50  0000 C CNN
-F 2 "" H 4350 4050 50  0001 C CNN
-F 3 "" H 4350 4050 50  0001 C CNN
-	1    4350 4050
+P 3950 4050
+F 0 "#PWR0105" H 3950 3800 50  0001 C CNN
+F 1 "GND" H 3955 3877 50  0000 C CNN
+F 2 "" H 3950 4050 50  0001 C CNN
+F 3 "" H 3950 4050 50  0001 C CNN
+	1    3950 4050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -198,9 +198,7 @@ F 3 "" H 6850 3350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4650 3550 4350 3550
-Wire Wire Line
-	4350 3550 4350 4050
+	3950 3550 3950 4050
 Wire Wire Line
 	6200 3850 6850 3850
 Wire Wire Line
@@ -211,11 +209,9 @@ Connection ~ 6850 3650
 Wire Wire Line
 	6850 3650 6850 3850
 Text GLabel 8650 3150 2    50   Input ~ 0
-GPIO1
-Text GLabel 6400 3550 2    50   Input ~ 0
-GPIO1
-Wire Wire Line
-	6200 3550 6400 3550
+GPIO2
+Text GLabel 4450 3650 0    50   Input ~ 0
+GPIO2
 Wire Wire Line
 	8650 3150 8450 3150
 Connection ~ 8450 3150
@@ -230,4 +226,8 @@ F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 8100 3400 50  0001
 	1    7950 3150
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	3950 3550 4650 3550
+Wire Wire Line
+	4650 3650 4450 3650
 $EndSCHEMATC

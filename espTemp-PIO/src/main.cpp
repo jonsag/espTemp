@@ -25,7 +25,7 @@ void setup()
   // Serial port for debugging purposes
   Serial.begin(115200);
 
-  dht.setup(dhtPin, DHTesp::DHT22);
+  dht.setup(dhtPin, DHTesp::dhtType);
 
   setup_wifi();
 
@@ -53,8 +53,7 @@ void setup()
                 message = "No message sent";
               }
               //request->send(200, "text/plain", "Hello, GET: " + message);
-              request->send(200, "text/plain", String(sensor1Name).c_str());
-            });
+              request->send(200, "text/plain", String(sensor1Name).c_str()); });
 
   server.on("/value.php", HTTP_GET, [](AsyncWebServerRequest *request)
             {
@@ -67,8 +66,7 @@ void setup()
               {
                 message = "No message sent";
               }
-              request->send(200, "text/plain", String(t).c_str());
-            });
+              request->send(200, "text/plain", String(t).c_str()); });
 
   server.onNotFound(notFound);
 
