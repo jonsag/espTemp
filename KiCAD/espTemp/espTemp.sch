@@ -25,17 +25,6 @@ F 3 "http://l0l.org.uk/2014/12/esp8266-modules-hardware-guide-gotta-catch-em-all
 	1    0    0    -1  
 $EndComp
 $Comp
-L Sensor:DHT11 U3
-U 1 1 61A673A0
-P 7950 3150
-F 0 "U3" H 7706 3196 50  0000 R CNN
-F 1 "DHT11" H 7706 3105 50  0000 R CNN
-F 2 "My_Misc:DHT22,RHT03,CM2303_large" H 7950 2750 50  0001 C CNN
-F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 8100 3400 50  0001 C CNN
-	1    7950 3150
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Battery_Cell BT1
 U 1 1 61A67CA8
 P 4750 2300
@@ -230,4 +219,15 @@ Wire Wire Line
 Wire Wire Line
 	8650 3150 8450 3150
 Connection ~ 8450 3150
+$Comp
+L My_Parts:DHT22,CM2303 U3
+U 1 1 61B915F0
+P 7950 3150
+F 0 "U3" H 7707 3196 50  0000 R CNN
+F 1 "DHT22,CM2303" H 7707 3105 50  0000 R CNN
+F 2 "My_Misc:DHT22,RHT03,CM2303_large" H 7950 2750 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 8100 3400 50  0001 C CNN
+	1    7950 3150
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
