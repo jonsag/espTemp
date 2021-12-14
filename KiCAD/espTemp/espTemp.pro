@@ -1,4 +1,4 @@
-update=Thu 02 Dec 2021 01:41:52 PM CET
+update=Tue 14 Dec 2021 06:15:34 PM CET
 version=1
 last_client=kicad
 [general]
@@ -231,7 +231,7 @@ Clearance=0.762
 TrackWidth=0.762
 ViaDiameter=1.524
 ViaDrill=0.4
-uViaDiameter=1.524
+uViaDiameter=2.032
 uViaDrill=0.1
 dPairWidth=0.2
 dPairGap=0.25
