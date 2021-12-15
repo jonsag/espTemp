@@ -19,7 +19,7 @@ DHT22
 AM2302 (Packaged DHT22)
 RHT03 (Equivalent to DHT22)
 */
-#define dhtType AM2302
+#define dhtType DHT22
 const int dhtPin = 2; // Connect DHT sensor to GPIO2
 
 /***********
