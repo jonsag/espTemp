@@ -8,6 +8,8 @@ Modified from [https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-an
 
 Build according to schematics in KiCAD.  
 
+![3dView](KiCAD/espTemp/espTemp.png)
+
 ## Software
 
 Copy file wifiConfig.h.template in espTemp-PIO/src to wifiConfig.h.  
