@@ -380,7 +380,7 @@
 
   (footprint "kibuzzard-62077BA3" (layer "F.Cu")
     (tedit 62077BA3) (tstamp 8e697b96-cf4c-43ef-b321-8c2422b088bf)
-    (at 141.605 78.105 90)
+    (at 154.305 86.065 90)
     (descr "Converted using: scripting")
     (tags "svg2mod")
     (attr board_only exclude_from_pos_files exclude_from_bom)

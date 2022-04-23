@@ -8,7 +8,7 @@ Modified from [https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-an
 
 Build according to schematics in KiCAD.  
 
-![3dView](KiCAD/espTemp/espTemp.png)
+![3dView](./KiCad/espTemp/espTemp.png)
 
 ## Software
 
