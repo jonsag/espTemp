@@ -19,11 +19,29 @@
 #include "wifi.h"
 #include "webServer.h"
 #include "dht.h"
+#include "screen.h"
 
 void setup()
 {
-  // Serial port for debugging purposes
-  Serial.begin(115200);
+  Serial.begin(115200); // serial port for debugging purposes
+
+#if SCREEN
+ Wire.begin(SDA, SCL);
+
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3D);
+
+  // Wire.setClock(400000L);   // uncomment this to set I2C clock to 400kHz
+
+  display.display(); // display the splashscreen
+  delay(500);
+
+  display.clearDisplay();
+
+  drawText(1, 10, 10, "Hello World!");
+  delay(500);
+
+  display.clearDisplay();
+  #endif
 
   dht.setup(dhtPin, DHTesp::dhtType);
 
