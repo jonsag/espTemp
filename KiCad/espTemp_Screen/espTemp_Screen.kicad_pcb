@@ -5,6 +5,12 @@
   )
 
   (paper "A4")
+  (title_block
+    (title "espTemp-screen")
+    (date "2022-12-15")
+    (rev "0.1")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)
@@ -949,7 +955,7 @@
   (gr_line (start 170.18 73.025) (end 170.18 102.235) (layer "Edge.Cuts") (width 0.05) (tstamp 5463a655-5ed1-4320-a68e-898a895bc633))
   (gr_line (start 170.18 102.235) (end 105.41 102.235) (layer "Edge.Cuts") (width 0.05) (tstamp 77be933e-0f18-4b12-9907-ddeeac4a7a03))
   (gr_line (start 105.41 102.235) (end 105.41 73.025) (layer "Edge.Cuts") (width 0.05) (tstamp db9d4d1d-fc48-4130-af9e-595cd4bab9a2))
-  (gr_text "espTemp\nJon Sagebrand\ngithub.com/jonsag/espTemp" (at 125.095 83.82 -30) (layer "B.Cu") (tstamp 41acfe41-fac7-432a-a7a3-946566e2d504)
+  (gr_text "${TITLE}-${REVISION}\nJon Sagebrand\ngithub.com/jonsag/espTemp" (at 125.095 83.82 -30) (layer "B.Cu") (tstamp 41acfe41-fac7-432a-a7a3-946566e2d504)
     (effects (font (size 0.635 0.635) (thickness 0.127)) (justify left mirror))
   )
 

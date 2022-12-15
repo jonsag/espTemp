@@ -26,7 +26,7 @@ void setup()
   Serial.begin(115200); // serial port for debugging purposes
 
 #if SCREEN
- Wire.begin(SDA, SCL);
+  Wire.begin(SDA, SCL);
 
   display.begin(SSD1306_SWITCHCAPVCC, 0x3D);
 
@@ -41,7 +41,7 @@ void setup()
   delay(500);
 
   display.clearDisplay();
-  #endif
+#endif
 
   dht.setup(dhtPin, DHTesp::dhtType);
 

@@ -23,6 +23,7 @@ Compile and upload.
 Connect via serial (while module is still in  programmer) to find out IP and port.  
 
 ## Pins on the ESP-01
+
 Pin         Input       Output  
 5   GPIO0   pulled up   OK          connected to FLASH button, boot fails if pulled LOW  
 2   GPIO1   TX pin      OK          HIGH at boot, debug output at boot, boot fails if pulled LOW  

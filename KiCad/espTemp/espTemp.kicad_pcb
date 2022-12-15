@@ -5,6 +5,12 @@
   )
 
   (paper "A4")
+  (title_block
+    (title "espTemp")
+    (date "2022-12-15")
+    (rev "0.1")
+  )
+
   (layers
     (0 "F.Cu" signal)
     (31 "B.Cu" signal)
@@ -875,7 +881,7 @@
   (gr_text "-" (at 135.255 79.375) (layer "B.Cu") (tstamp 3a52f112-cb97-43db-aaeb-20afe27664d7)
     (effects (font (size 1.5 1.5) (thickness 0.3)) (justify mirror))
   )
-  (gr_text "espTemp\nJon Sagebrand\ngithub.com/jonsag/espTemp" (at 161.29 86.995 -30) (layer "B.Cu") (tstamp 41acfe41-fac7-432a-a7a3-946566e2d504)
+  (gr_text "${TITLE}-${REVISION}\nJon Sagebrand\ngithub.com/jonsag/espTemp" (at 161.29 86.995 -30) (layer "B.Cu") (tstamp 41acfe41-fac7-432a-a7a3-946566e2d504)
     (effects (font (size 0.635 0.635) (thickness 0.127)) (justify left mirror))
   )
   (gr_text "+" (at 135.255 76.835) (layer "B.Cu") (tstamp f4eb0267-179f-46c9-b516-9bfb06bac1ba)
