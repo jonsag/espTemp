@@ -10,7 +10,7 @@
  * Sensors
  ***********/
 #define numberOfSensors 1
-#define sensor1Name "ESP-01-02"
+#define device_name "ESP-01-02"
 
 /***********
  * DHT config
@@ -59,12 +59,14 @@ Adafruit_SSD1306 display(OLED_RESET);
 #define MQTT 1
 
 #if MQTT
-#define MQTT_HOST IPAddress(192, 168, 1, 10) // IP of the mqtt broker
-#define MQTT_PORT 1883             // port the broker is listening to
+#define MQTT_HOST IPAddress(192, 168, 68, 173) // IP of the mqtt broker
+#define MQTT_PORT 1883                         // port the broker is listening to
 
 // MQTT Topics
-#define MQTT_PUB_TEMP "environment/esp-01-02/temperature"
-#define MQTT_PUB_HUM "environment/esp-01-02/humidity"
+#define MQTT_TOP_TOPIC "environment"
+
+#define MQTT_PUB_TEMP "temperature"
+#define MQTT_PUB_HUM "humidity"
 #endif
 
 /***********

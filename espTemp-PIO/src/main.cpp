@@ -1,7 +1,10 @@
 /*********
-  Rui Santos
-  Complete project details at https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-and-humidity-web-server-with-arduino-ide/
-*********/
+ * Jon Sagebrand
+ * Credits to Rui Santos
+ * Read his tutorials at
+ * https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-and-humidity-web-server-with-arduino-ide/ and
+ * https://RandomNerdTutorials.com/esp8266-nodemcu-mqtt-publish-bme680-arduino/
+ *********/
 #include <Arduino.h>
 
 #include "config.h"
@@ -9,8 +12,8 @@
 /* Add a file in this directory, called 'wifiConfig.h'
     This file should include two lines, setting your SSID and wifi password:
 
-    const char* ssid = "SSID_name";
-    const char* password = "Wifi_password";
+    #define WIFI_SSID "<your SSID>"
+    #define WIFI_PASSWORD "<your wifi password>"
 
     Update these with values suitable for your network.
 */
