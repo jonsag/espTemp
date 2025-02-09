@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "espTemp-PIO",
+			"path": "espTemp-PIO"
+		}
+	],
+	"settings": {}
+}
