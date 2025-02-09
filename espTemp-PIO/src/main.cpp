@@ -14,17 +14,29 @@
 
     Update these with values suitable for your network.
 */
+
 #include "wifiConfig.h"
 
 #include "wifi.h"
+
+#if MQTT
+#include "mqtt.h"
+#endif
+
 #include "webServer.h"
 #include "dht.h"
+
+#if SCREEN
 #include "screen.h"
+#endif
 
 void setup()
 {
-  Serial.begin(115200); // serial port for debugging purposes
+  Serial.begin(serial_speed); // serial port for debugging purposes
 
+  /***********
+   * Screen
+   ***********/
 #if SCREEN
   Wire.begin(SDA, SCL);
 
@@ -43,10 +55,39 @@ void setup()
   display.clearDisplay();
 #endif
 
+  /***********
+   * DHT config
+   ***********/
   dht.setup(dhtPin, DHTesp::dhtType);
 
-  setup_wifi();
+  /***********
+   * Wifi
+   ***********/
+  // setup_wifi();
 
+#if MQTT
+  wifiConnectHandler = WiFi.onStationModeGotIP(onWifiConnect);
+  wifiDisconnectHandler = WiFi.onStationModeDisconnected(onWifiDisconnect);
+#endif
+
+  /***********
+   * MQTT
+   ***********/
+#if MQTT
+  mqttClient.onConnect(onMqttConnect);
+  mqttClient.onDisconnect(onMqttDisconnect);
+  mqttClient.onSubscribe(onMqttSubscribe);
+  mqttClient.onUnsubscribe(onMqttUnsubscribe);
+  mqttClient.onMessage(onMqttMessage);
+  mqttClient.onPublish(onMqttPublish);
+  mqttClient.setServer(MQTT_HOST, MQTT_PORT);
+#endif
+
+  connectToWifi();
+
+  /***********
+   * Web server
+   ***********/
   // Route for root / web page
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/html", index_html, processor); });

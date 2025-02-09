@@ -1,6 +1,11 @@
 {
     "cmake.configureOnOpen": false,
     "cSpell.words": [
+        "beegee",
+        "esphome",
+        "khoih",
+        "knolleary",
+        "ottowinter",
         "SWITCHCAPVCC"
     ]
 }

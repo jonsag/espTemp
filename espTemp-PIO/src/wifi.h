@@ -1,6 +1,12 @@
 #include <ESP8266WiFi.h>
 
-void setup_wifi()
+void connectToWifi()
+{
+  Serial.println("Connecting to Wi-Fi...");
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+}
+
+/*void setup_wifi()
 {
   delay(100);
 
@@ -23,4 +29,7 @@ void setup_wifi()
   Serial.print("Web server port: ");
   Serial.println(serverPort);
   Serial.println();
+
+  connectToMqtt();
 }
+*/
