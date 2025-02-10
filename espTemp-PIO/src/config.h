@@ -5,12 +5,13 @@
 #include <Adafruit_Sensor.h>
 
 #define SCREEN 0 // 1 if screen is present
+#define MQTT 1   // 1 to send values to an mqtt broker
 
 /***********
  * Sensors
  ***********/
 #define numberOfSensors 1
-#define device_name "ESP-01-02"
+#define device_name "ESP-35E561"
 
 /***********
  * DHT config
@@ -56,8 +57,6 @@ Adafruit_SSD1306 display(OLED_RESET);
 /***********
  * MQTT
  ***********/
-#define MQTT 1
-
 #if MQTT
 #define MQTT_HOST IPAddress(192, 168, 68, 173) // IP of the mqtt broker
 #define MQTT_PORT 1883                         // port the broker is listening to
@@ -65,8 +64,9 @@ Adafruit_SSD1306 display(OLED_RESET);
 // MQTT Topics
 #define MQTT_TOP_TOPIC "environment"
 
-#define MQTT_PUB_TEMP "temperature"
-#define MQTT_PUB_HUM "humidity"
+#define MQTT_PUB_TEMP "ESP-35E561/temperature"
+#define MQTT_PUB_HUM "ESP-35E561/humidity"
+
 #endif
 
 /***********
@@ -83,3 +83,4 @@ unsigned long previousMillis = 0; // will store last time DHT was updated
 
 // Serial speed
 #define serial_speed 115200
+

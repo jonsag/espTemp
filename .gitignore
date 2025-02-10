@@ -10,3 +10,4 @@ KiCad/espTemp/espTemp-backups/
 espTemp-PIO/src/wifiConfig.h
 KiCad/espTemp_Screen-amd1117/espTemp_Screen-backups/
 KiCad/espTemp-screen-ams1117/espTemp-screen-ams1117-backups/
+espTemp-PIO/src/secrets.h
