@@ -11,9 +11,15 @@
  * Sensors
  ***********/
 #define numberOfSensors 1
+<<<<<<< HEAD
 //#define device_name "ESP-2388C5" // ESP-01
 #define device_name "ESP-35E561" // ESP-01
 //#define device_name "ESP-E0569F" // nodeMCU v2
+=======
+//#define device_name "ESP-2388C5"
+//#define device_name "ESP-35E561"
+#define device_name "nodeMCU"
+>>>>>>> d210900 (added nodemcu v2)
 
 /***********
  * DHT config
@@ -71,8 +77,16 @@ String config_payload;
 //#define MQTT_PUB_TEMP "ESP-2388C5/temperature"
 //#define MQTT_PUB_HUM "ESP-2388C5/humidity"
 
+<<<<<<< HEAD
 #define MQTT_PUB_TEMP "ESP-35E561/temperature"
 #define MQTT_PUB_HUM "ESP-35E561/humidity"
+=======
+//#define MQTT_PUB_TEMP "ESP-35E561temperature"
+//#define MQTT_PUB_HUM "ESP-35E561/humidity"
+
+#define MQTT_PUB_TEMP "nodeMCU/temperature"
+#define MQTT_PUB_HUM "nodeMCU/humidity"
+>>>>>>> d210900 (added nodemcu v2)
 
 //#define MQTT_PUB_TEMP "ESP-E0569F/temperature"
 //#define MQTT_PUB_HUM "ESP-E0569F/humidity"
