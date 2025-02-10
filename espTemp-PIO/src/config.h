@@ -11,7 +11,9 @@
  * Sensors
  ***********/
 #define numberOfSensors 1
-#define device_name "ESP-35E561"
+//#define device_name "ESP-2388C5"
+//#define device_name "ESP-35E561"
+#define device_name "nodeMCU"
 
 /***********
  * DHT config
@@ -64,8 +66,14 @@ Adafruit_SSD1306 display(OLED_RESET);
 // MQTT Topics
 #define MQTT_TOP_TOPIC "environment"
 
-#define MQTT_PUB_TEMP "ESP-35E561/temperature"
-#define MQTT_PUB_HUM "ESP-35E561/humidity"
+//#define MQTT_PUB_TEMP "ESP-2388C5/temperature"
+//#define MQTT_PUB_HUM "ESP-2388C5/humidity"
+
+//#define MQTT_PUB_TEMP "ESP-35E561temperature"
+//#define MQTT_PUB_HUM "ESP-35E561/humidity"
+
+#define MQTT_PUB_TEMP "nodeMCU/temperature"
+#define MQTT_PUB_HUM "nodeMCU/humidity"
 
 #endif
 
