@@ -4,6 +4,7 @@
  * Read his tutorials at
  * https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-and-humidity-web-server-with-arduino-ide/ and
  * https://RandomNerdTutorials.com/esp8266-nodemcu-mqtt-publish-bme680-arduino/
+ * https://randomnerdtutorials.com/esp8266-web-server-with-arduino-ide/
  *********/
 #include <Arduino.h>
 
@@ -74,8 +75,6 @@ void setup()
   /***********
    * Wifi
    ***********/
-  // setup_wifi();
-
 #if MQTT
   Serial.println("Setting up wifi ...");
   wifiConnectHandler = WiFi.onStationModeGotIP(onWifiConnect);
@@ -102,12 +101,18 @@ void setup()
   connectToWifi();
 
   /***********
+   * Chip ID & topics
+   ***********/
+  get_chip_ID();
+
+  /***********
    * Web server
    ***********/
   Serial.println("Setting up web server ...");
   // Route for root / web page
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/html", index_html, processor); });
+
   server.on("/temperature", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", String(t).c_str()); });
   server.on("/humidity", HTTP_GET, [](AsyncWebServerRequest *request)
@@ -115,6 +120,9 @@ void setup()
 
   server.on("/count.php", HTTP_GET, [](AsyncWebServerRequest *request)
             { request->send_P(200, "text/plain", String(numberOfSensors).c_str()); });
+
+  server.on("/chipID", HTTP_GET, [](AsyncWebServerRequest *request)
+            { request->send_P(200, "text/plain", String(chip_id_HEX).c_str()); });
 
   // Send a GET request to <IP>/get?message=<message>
   server.on("/name.php", HTTP_GET, [](AsyncWebServerRequest *request)
